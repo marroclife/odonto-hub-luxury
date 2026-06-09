@@ -53,7 +53,7 @@ const Hero = () => (
   </section>
 );
 
-const ServiceCard = ({ icon: Icon, title, desc, tags }) => (
+const ServiceCard = ({ icon: Icon, title, desc, tags }: { icon: any, title: string, desc: string, tags: string[] }) => (
   <motion.div 
     whileHover={{ y: -10 }}
     className="glass-card p-8 h-full flex flex-col justify-between group"
@@ -66,7 +66,7 @@ const ServiceCard = ({ icon: Icon, title, desc, tags }) => (
       <p className="opacity-60 leading-relaxed mb-6">{desc}</p>
     </div>
     <div className="flex flex-wrap gap-2">
-      {tags.map(tag => (
+      {tags.map((tag: string) => (
         <span key={tag} className="text-[10px] uppercase tracking-tighter px-2 py-1 rounded-full bg-white/5 border border-white/10 opacity-60">
           {tag}
         </span>
