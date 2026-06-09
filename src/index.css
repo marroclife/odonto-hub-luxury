@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0E14] text-white font-sans overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl shadow-2xl;
+  }
+  .gold-gradient-text {
+    @apply bg-gradient-to-r from-[#D4AF37] via-[#F7E7CE] to-[#D4AF37] bg-clip-text text-transparent;
+  }
+  .btn-gold {
+    @apply bg-gradient-to-r from-[#D4AF37] to-[#F7E7CE] text-[#2C3E50] font-bold px-8 py-4 rounded-full 
+           hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] 
+           active:scale-95 text-center block w-full sm:w-auto;
+  }
+}
